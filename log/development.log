@@ -626,6 +626,7 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/reservations" for 127.0.0.1 at 2018-04-18 11:52:55 +1000
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   
@@ -646,10 +647,58 @@ ActionController::RoutingError (undefined method `before_action' for main:Object
   
 app/controllers/application_controller.rb:8:in `<top (required)>'
 app/controllers/users_controller.rb:1:in `<top (required)>'
+=======
+Started GET "/" for 127.0.0.1 at 2018-04-18 11:54:58 +1000
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 361ms (Views: 352.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-18 11:56:17 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-18 11:58:28 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:02:45 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:03:13 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:05:01 +1000
+  
+SyntaxError (/Users/moniquelee/Projects/burning-airlines/burningairlines_server/app/controllers/application_controller.rb:42: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/application_controller.rb:42: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/pages_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:05:34 +1000
+>>>>>>> 89a6625c7fcab0b790178a27b54c41d5399fe78f
   
 ActionController::RoutingError (undefined method `before_action' for main:Object):
   
 app/controllers/application_controller.rb:8:in `<top (required)>'
+<<<<<<< HEAD
 app/controllers/users_controller.rb:1:in `<top (required)>'
 Started GET "/users" for 127.0.0.1 at 2018-04-18 12:26:12 +1000
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -744,6 +793,126 @@ Completed 200 OK in 32ms (Views: 22.2ms | ActiveRecord: 3.4ms)
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Australias Airlines"], ["rows", 10], ["columns", 10], ["created_at", "2018-04-18 02:29:11.319922"], ["updated_at", "2018-04-18 02:29:11.319922"]]
   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+=======
+app/controllers/pages_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:09:01 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:11:27 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-04-18 12:14:28 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/moniquelee/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/moniquelee/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (7.1ms)
+  Rendered /Users/moniquelee/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/moniquelee/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 26ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:16:57 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"flights"}, missing required keys: [:id]):
+     8: 
+     9: <%= link_to 'Airplanes', airplanes_path %>
+    10: <%= link_to 'Create new Airplane', new_airplane_path %>
+    11: <%= link_to 'Flight', flight_path %>
+    12: <%= link_to 'Create new Flight', new_flight_path %>
+  
+app/views/pages/home.html.erb:11:in `_app_views_pages_home_html_erb___2719030905020454102_70360039140940'
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:17:11 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/airplanes" for 127.0.0.1 at 2018-04-18 12:17:13 +1000
+Processing by AirplanesController#index as HTML
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (0.8ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  Rendered airplanes/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 200 OK in 48ms (Views: 31.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/airplanes/new" for 127.0.0.1 at 2018-04-18 12:17:23 +1000
+Processing by AirplanesController#new as HTML
+  Rendering airplanes/new.html.erb within layouts/application
+  Rendered airplanes/_form.html.erb (14.9ms)
+  Rendered airplanes/new.html.erb within layouts/application (17.9ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 60ms (Views: 45.8ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-04-18 12:17:26 +1000
+Processing by FlightsController#index as HTML
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  Rendered flights/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navigation.html.erb (7.6ms)
+Completed 200 OK in 57ms (Views: 38.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:17:41 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+Completed 200 OK in 40ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:18:08 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:18:36 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mAirplane Load (0.5ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.6ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sydney Airlines"], ["rows", 5], ["columns", 5], ["created_at", "2018-04-18 02:19:11.016736"], ["updated_at", "2018-04-18 02:19:11.016736"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Scoot Airlines"], ["rows", 10], ["columns", 10], ["created_at", "2018-04-18 02:19:11.027045"], ["updated_at", "2018-04-18 02:19:11.027045"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Melbourne Airlines"], ["rows", 20], ["columns", 20], ["created_at", "2018-04-18 02:19:11.029109"], ["updated_at", "2018-04-18 02:19:11.029109"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Brisbane Airlines"], ["rows", 15], ["columns", 15], ["created_at", "2018-04-18 02:19:11.030993"], ["updated_at", "2018-04-18 02:19:11.030993"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Australias Airlines"], ["rows", 10], ["columns", 10], ["created_at", "2018-04-18 02:19:11.032833"], ["updated_at", "2018-04-18 02:19:11.032833"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+>>>>>>> 89a6625c7fcab0b790178a27b54c41d5399fe78f
   [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
@@ -757,6 +926,7 @@ Completed 200 OK in 32ms (Views: 22.2ms | ActiveRecord: 3.4ms)
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+<<<<<<< HEAD
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "flight_from", "flight_to", "flight_date", "airplane_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["flight_number", 2000], ["flight_from", "Sydney"], ["flight_to", "Melbourne"], ["flight_date", "2018-04-20 00:00:00"], ["airplane_id", 6], ["created_at", "2018-04-18 02:29:11.360462"], ["updated_at", "2018-04-18 02:29:11.360462"]]
   [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
@@ -791,5 +961,108 @@ Processing by FlightsController#index as HTML
   [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
   Rendered flights/index.html.erb within layouts/application (15.1ms)
 Completed 200 OK in 173ms (Views: 164.1ms | ActiveRecord: 6.6ms)
+=======
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:21:40 +1000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 210ms (Views: 199.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/airplanes" for 127.0.0.1 at 2018-04-18 12:21:48 +1000
+Processing by AirplanesController#index as HTML
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (0.9ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  Rendered airplanes/index.html.erb within layouts/application (44.7ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 80ms (Views: 53.0ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:21:50 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/airplanes" for 127.0.0.1 at 2018-04-18 12:22:03 +1000
+Processing by AirplanesController#index as HTML
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  Rendered airplanes/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:22:07 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/airplanes/new" for 127.0.0.1 at 2018-04-18 12:22:08 +1000
+Processing by AirplanesController#new as HTML
+  Rendering airplanes/new.html.erb within layouts/application
+  Rendered airplanes/_form.html.erb (11.9ms)
+  Rendered airplanes/new.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:22:09 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-04-18 12:22:11 +1000
+Processing by FlightsController#index as HTML
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  Rendered flights/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 34ms (Views: 23.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:22:14 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for 127.0.0.1 at 2018-04-18 12:22:15 +1000
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (7.5ms)
+  Rendered flights/new.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 200 OK in 68ms (Views: 46.5ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-18 12:22:20 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-04-18 12:22:21 +1000
+Processing by FlightsController#index as HTML
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  Rendered flights/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.3ms)
+>>>>>>> 89a6625c7fcab0b790178a27b54c41d5399fe78f
 
 

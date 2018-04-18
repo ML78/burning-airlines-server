@@ -1,0 +1,11 @@
+<h1>Burning Airlines Home Page</h1>
+
+<% if @current_user.present? %>
+  Welcome back <%= @current_user.email %>
+<% end %>
+
+
+<%= link_to 'Airplanes', airplanes_path %>
+<%= link_to 'Create new Airplane', new_airplane_path %>
+<%= link_to 'Flight', flights_path %>
+<%= link_to 'Create new Flight', new_flight_path %>
