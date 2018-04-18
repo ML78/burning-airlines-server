@@ -7,7 +7,7 @@ class AirplanesController < ApplicationController
   # GET /airplanes
   # GET /airplanes.json
   def index
-    @airplanes = Airplane.all
+    @airplanes = Airplane.order("created_at DESC")
   end
 
   # GET /airplanes/1
