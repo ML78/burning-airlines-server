@@ -1,8 +1,8 @@
 class AirplanesController < ApplicationController
-  before_action :set_airplane, only: [:show, :edit, :update, :destroy]
+  # before_action :set_airplane, only: [:show, :edit, :update, :destroy]
 
   #before_action :require_user, except: [:index, :show]
-  before_action :require_admin, only: [:create, :edit, :update, :destroy]
+  # before_action :require_admin, only: [:create, :edit, :update, :destroy]
 
 
   # GET /airplanes
