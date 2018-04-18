@@ -33,14 +33,11 @@
 
   <div class="field">
     <%= form.label 'Airplane' %>
-    <%= form.collection_check_boxes :airplane_ids, Airplane.all, :id, :name do |checkbox| %>
-    <%= checkbox.label {checkbox.check_box + checkbox.text} %>
-    <% end %>
+    <%= form.select :airplane_id, Airplane.pluck(:name,:id)%>
   </div>
+
 
 <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
-
-<%= link_to 'Add to Airplane', airplanes_path %>
