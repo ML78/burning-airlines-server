@@ -33,11 +33,19 @@
 #                  PATCH  /airplanes/:id(.:format)         airplanes#update
 #                  PUT    /airplanes/:id(.:format)         airplanes#update
 #                  DELETE /airplanes/:id(.:format)         airplanes#destroy
-# 
+#
 
 Rails.application.routes.draw do
+
+  root :to => 'pages#home'
+
   resources :reservations
   resources :users
+
+  get '/login' => 'session#new'        # Sign in form
+  post '/login' => 'session#create'    # Sign in action
+  delete '/login' => 'session#destroy' # Sign out
+
   resources :flights
   resources :airplanes
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
