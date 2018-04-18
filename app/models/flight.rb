@@ -3,11 +3,11 @@
 # Table name: flights
 #
 #  id            :integer          not null, primary key
-#  flight_number :integer
+#  flight_number :text
 #  flight_from   :text
 #  flight_to     :text
 #  flight_date   :datetime
-#  plane_id      :integer
+#  airplane_id   :integer
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #
