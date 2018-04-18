@@ -6,9 +6,9 @@ class SessionController < ApplicationController
 
   def create
     @user = User.find_by :name => params[:name]
-    if @user.present? && @user.authenticate(params[:password])
+    if @user.present?
       session[:user_id] = @user.id
-      redirect_to @user
+      redirect_to root_path
     else
       flash[:error] = "Error with log-in"
       redirect_to login_path
