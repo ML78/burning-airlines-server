@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :flight_number %>
-    <%= form.number_field :flight_number, id: :flight_flight_number %>
+    <%= form.text_area :flight_number, id: :flight_flight_number %>
   </div>
 
   <div class="field">
@@ -32,11 +32,15 @@
   </div>
 
   <div class="field">
-    <%= form.label :airplane_id %>
-    <%= form.number_field :airplane_id, id: :flight_airplane_id %>
+    <%= form.label 'Airplane' %>
+    <%= form.collection_check_boxes :airplane_ids, Airplane.all, :id, :name do |checkbox| %>
+    <%= checkbox.label {checkbox.check_box + checkbox.text} %>
+    <% end %>
   </div>
 
-  <div class="actions">
+<div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+<%= link_to 'Add to Airplane', airplanes_path %>
