@@ -480,5 +480,3 @@ Processing by Rails::InfoController#routes as HTML
   Rendered /Users/moniquelee/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.9ms)
   Rendered /Users/moniquelee/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (17.0ms)
 Completed 200 OK in 39ms (Views: 25.9ms | ActiveRecord: 0.0ms)
-
-
