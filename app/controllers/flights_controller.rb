@@ -1,8 +1,8 @@
 class FlightsController < ApplicationController
   before_action :set_flight, only: [:show, :edit, :update, :destroy]
 
-  #before_action :require_user, except: [:index, :show]
-  #before_action :require_admin, only: [:create, :edit, :update, :destroy]
+  before_action :require_user, except: [:index, :show]
+  before_action :require_admin, only: [:create, :edit, :update, :destroy]
 
 
   # GET /flights
@@ -22,6 +22,8 @@ class FlightsController < ApplicationController
   def new
     @flight = Flight.new
   end
+
+
 
   # GET /flights/1/edit
   def edit

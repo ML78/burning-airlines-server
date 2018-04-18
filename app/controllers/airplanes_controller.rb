@@ -1,8 +1,8 @@
 class AirplanesController < ApplicationController
   before_action :set_airplane, only: [:show, :edit, :update, :destroy]
 
-  #before_action :require_user, except: [:index, :show]
-  #before_action :require_admin, only: [:create, :edit, :update, :destroy]
+  before_action :require_user, except: [:index, :show]
+  before_action :require_admin, only: [:create, :edit, :update, :destroy]
 
   # GET /airplanes
   # GET /airplanes.json
@@ -72,6 +72,6 @@ class AirplanesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def airplane_params
-      params.require(:airplane).permit(:name, :rows, :columns, :flight_id)
+      params.require(:airplane).permit(:name, :rows, :columns, flight_ids: [])
     end
 end

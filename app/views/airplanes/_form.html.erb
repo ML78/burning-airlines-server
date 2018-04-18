@@ -18,12 +18,19 @@
 
   <div class="field">
     <%= form.label :rows %>
-    <%= form.text_area :rows, id: :airplane_rows %>
+    <%= form.number_field :rows, id: :airplane_rows %>
   </div>
 
   <div class="field">
     <%= form.label :columns %>
     <%= form.number_field :columns, id: :airplane_columns %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Flight Number' %>
+    <%= form.collection_check_boxes :flight_ids, Flight.all, :id, :flight_number do |checkbox| %>
+    <%= checkbox.label {checkbox.check_box + checkbox.text} %>
+    <% end %>
   </div>
 
   <div class="actions">
