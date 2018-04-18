@@ -5,12 +5,12 @@ class SessionController < ApplicationController
 #add session according to user authentication
 
   def create
-    @user = User.find_by :email => params[:email]
+    @user = User.find_by :name => params[:name]
     if @user.present? && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       redirect_to @user
     else
-      flash[:error] = "Invalid email or password"
+      flash[:error] = "Error with log-in"
       redirect_to login_path
     end
   end

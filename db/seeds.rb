@@ -40,5 +40,8 @@ f4 = Flight.create(:flight_number => 1230, :flight_from => 'Sydney', :flight_to 
 f5 = Flight.create(:flight_number => 4560, :flight_from => 'Melbourne', :flight_to => 'Adeliade', :flight_date => '13')
 f6 = Flight.create(:flight_number => 3746, :flight_from => 'Brisbane', :flight_to => 'Melbourne', :flight_date => '6')
 
+User.destroy_all
+u1 = User.create :name => 'Admin', :admin => true
+
 a1.flights << f1
 a2.flights << f2
