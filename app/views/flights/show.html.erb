@@ -17,7 +17,7 @@
 
 <p>
   <strong>Flight date:</strong>
-  <%= @flight.flight_date %>
+  <%= @flight.flight_date.strftime("%A, %-d %B %Y, %H:%M:%S UTC") %>
 </p>
 
 <p>

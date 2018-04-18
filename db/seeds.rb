@@ -34,12 +34,12 @@ a6 = Airplane.create(:name => 'Airbus A600', :rows => 10, :columns => 10)
 
 
 Flight.destroy_all
-f1 = Flight.create(:flight_number => '2000', :flight_from => 'Sydney', :flight_to => 'Melbourne', :flight_date => '20')
-f2 = Flight.create(:flight_number => '3400', :flight_from => 'Melbourne', :flight_to => 'Brisbane', :flight_date => '30')
-f3 = Flight.create(:flight_number => '2400', :flight_from => 'Brisbane', :flight_to => 'Adelaide', :flight_date => '12')
-f4 = Flight.create(:flight_number => '1230', :flight_from => 'Sydney', :flight_to => 'Perth', :flight_date => '25')
-f5 = Flight.create(:flight_number => '4560', :flight_from => 'Melbourne', :flight_to => 'Adelaide', :flight_date => '13')
-f6 = Flight.create(:flight_number => '3746', :flight_from => 'Sydney', :flight_to => 'Hobart', :flight_date => '28')
+f1 = Flight.create(:flight_number => '2000', :flight_from => 'Sydney', :flight_to => 'Melbourne', :flight_date => '2018-04-20 17:30:00')
+f2 = Flight.create(:flight_number => '3400', :flight_from => 'Melbourne', :flight_to => 'Brisbane', :flight_date => '2018-04-21 11:00:00')
+f3 = Flight.create(:flight_number => '2400', :flight_from => 'Brisbane', :flight_to => 'Adelaide', :flight_date => '2018-04-25 18:30:00')
+f4 = Flight.create(:flight_number => '1230', :flight_from => 'Sydney', :flight_to => 'Perth', :flight_date => '2018-04-30 14:00:00')
+f5 = Flight.create(:flight_number => '4560', :flight_from => 'Melbourne', :flight_to => 'Adelaide', :flight_date => '2018-05-05 09:00:00')
+f6 = Flight.create(:flight_number => '3746', :flight_from => 'Sydney', :flight_to => 'Hobart', :flight_date => '2018-05-09 21:30:00')
 
 User.destroy_all
 u1 = User.create :name => 'Admin', :admin => true
