@@ -1,5 +1,5 @@
 <%= form_with(model: flight, local: true) do |form| %>
-  <% if flight.errors.any? %>
+  <% if @flight.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(flight.errors.count, "error") %> prohibited this flight from being saved:</h2>
 

@@ -25,11 +25,11 @@
 # end
 
 Airplane.destroy_all
-a1 = Airplane.create(:name => 'Sydney Airlines', :rows => 5, :columns => 5)
-a2 = Airplane.create(:name => 'Scoot Airlines', :rows => 10, :columns => 10)
-a3 = Airplane.create(:name => 'Melbourne Airlines', :rows => 20, :columns => 20)
-a4 = Airplane.create(:name => 'Brisbane Airlines', :rows => 15, :columns => 15)
-a5 = Airplane.create(:name => 'Australias Airlines', :rows => 10, :columns => 10)
+a1 = Airplane.create(:name => 'Airbus A100', :rows => 5, :columns => 5)
+a2 = Airplane.create(:name => 'Airbus A200', :rows => 10, :columns => 10)
+a3 = Airplane.create(:name => 'Airbus A300', :rows => 20, :columns => 20)
+a4 = Airplane.create(:name => 'Airbus A249', :rows => 15, :columns => 15)
+a5 = Airplane.create(:name => 'Airbus A747', :rows => 10, :columns => 10)
 
 
 Flight.destroy_all
