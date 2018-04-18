@@ -14,6 +14,8 @@ class FlightsController < ApplicationController
   # GET /flights/1
   # GET /flights/1.json
   def show
+    # @artist = Artist.find params[:id]
+    @flight = Flight.find params[:id]
   end
 
   # GET /flights/new
