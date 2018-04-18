@@ -1066,3 +1066,132 @@ Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.3ms)
 >>>>>>> 89a6625c7fcab0b790178a27b54c41d5399fe78f
 
 
+Started GET "/flights/1" for 127.0.0.1 at 2018-04-18 12:33:34 +1000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `flight_number' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <strong>Flight number:</strong>
+    5:   <%= @flight.flight_number %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/flights/show.html.erb:5:in `_app_views_flights_show_html_erb__3343526015398190332_70304729751780'
+Started GET "/flights" for 127.0.0.1 at 2018-04-18 12:33:49 +1000
+Processing by FlightsController#index as HTML
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.9ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  Rendered flights/index.html.erb within layouts/application (37.0ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 229ms (Views: 202.6ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/flights/1" for 127.0.0.1 at 2018-04-18 12:33:54 +1000
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `flight_number' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <strong>Flight number:</strong>
+    5:   <%= @flight.flight_number %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/flights/show.html.erb:5:in `_app_views_flights_show_html_erb__3343526015398190332_70304745290760'
+Started GET "/flights/1" for 127.0.0.1 at 2018-04-18 12:35:55 +1000
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 9.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `plane_id' for #<Flight:0x007fe22e67de88>
+Did you mean?  airplane_id):
+    22: 
+    23: <p>
+    24:   <strong>Plane:</strong>
+    25:   <%= @flight.plane_id %>
+    26: </p>
+    27: 
+    28: <%= link_to 'Edit', edit_flight_path(@flight) %> |
+  
+app/views/flights/show.html.erb:25:in `_app_views_flights_show_html_erb__3343526015398190332_70304708933560'
+Started GET "/flights/1" for 127.0.0.1 at 2018-04-18 12:36:41 +1000
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/flights/1/edit" for 127.0.0.1 at 2018-04-18 12:37:00 +1000
+Processing by FlightsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering flights/edit.html.erb within layouts/application
+  Rendered flights/_form.html.erb (2.3ms)
+  Rendered flights/edit.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <%= form_with(model: flight, local: true) do |form| %>
+    2:   <% if flight.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(flight.errors.count, "error") %> prohibited this flight from being saved:</h2>
+    5: 
+  
+app/views/flights/_form.html.erb:2:in `block in _app_views_flights__form_html_erb__4344241806380275066_70304753586420'
+app/views/flights/_form.html.erb:1:in `_app_views_flights__form_html_erb__4344241806380275066_70304753586420'
+app/views/flights/edit.html.erb:3:in `_app_views_flights_edit_html_erb___3884601983333724677_70304753620860'
+Started GET "/flights/1" for 127.0.0.1 at 2018-04-18 12:37:03 +1000
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/flights/1/edit" for 127.0.0.1 at 2018-04-18 12:37:04 +1000
+Processing by FlightsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering flights/edit.html.erb within layouts/application
+  Rendered flights/_form.html.erb (3.5ms)
+  Rendered flights/edit.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <%= form_with(model: flight, local: true) do |form| %>
+    2:   <% if flight.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(flight.errors.count, "error") %> prohibited this flight from being saved:</h2>
+    5: 
+  
+app/views/flights/_form.html.erb:2:in `block in _app_views_flights__form_html_erb__4344241806380275066_70304718669380'
+app/views/flights/_form.html.erb:1:in `_app_views_flights__form_html_erb__4344241806380275066_70304718669380'
+app/views/flights/edit.html.erb:3:in `_app_views_flights_edit_html_erb___3884601983333724677_70304718951380'
