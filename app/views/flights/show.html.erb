@@ -22,8 +22,14 @@
 
 <p>
   <strong>Airplane:</strong>
-  <%= @flight.airplane_id %>
+  <%= @flight.airplane.name %>
 </p>
+
+<p>
+  <strong>Number of Seats:</strong>
+  <%= @flight.airplane.rows * @flight.airplane.columns%>
+</p>
+
 
 <%= link_to 'Edit', edit_flight_path(@flight) %> |
   <%= link_to 'Back to Flights Listing', flights_path %>
