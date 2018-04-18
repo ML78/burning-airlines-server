@@ -6,7 +6,7 @@ end
 # Set up admin for higher level authorisation
 
 #   before_action :fetch_user
-# 
+#
 #   private
 #   helper_method :current_user, :logged_in, :admin_user
 #

@@ -1,5 +1,5 @@
 class FlightsController < ApplicationController
-  before_action :set_flight, only: [:show, :edit, :update, :destroy]
+  # before_action :set_flight, only: [:show, :edit, :update, :destroy]
 
   #before_action :require_user, except: [:index, :show]
   # before_action :require_admin, only: [:create, :edit, :update, :destroy]
@@ -73,6 +73,6 @@ class FlightsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def flight_params
-      params.require(:flight).permit(:flight_number, :flight_from, :flight_to, :flight_date, :plane_id)
+      params.require(:flight).permit(:flight_number, :flight_from, :flight_to, :flight_date, :airplane_id)
     end
 end
