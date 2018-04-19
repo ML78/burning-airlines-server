@@ -40,13 +40,17 @@ f3 = Flight.create(:flight_number => '2400', :flight_from => 'Brisbane', :flight
 f4 = Flight.create(:flight_number => '1230', :flight_from => 'Sydney', :flight_to => 'Perth', :flight_date => '2018-04-25 18:30:00')
 f5 = Flight.create(:flight_number => '4560', :flight_from => 'Melbourne', :flight_to => 'Adelaide', :flight_date => '2018-04-21 11:00:00')
 f6 = Flight.create(:flight_number => '3746', :flight_from => 'Sydney', :flight_to => 'Hobart', :flight_date => '2018-04-20 17:30:00')
+f7 = Flight.create(:flight_number => '3000', :flight_from => 'Sydney', :flight_to => 'Melbourne', :flight_date => '2018-04-19 21:30:00')
+f8 = Flight.create(:flight_number => '5000', :flight_from => 'Sydney', :flight_to => 'Melbourne', :flight_date => '2018-04-19 04:30:00')
+f9 = Flight.create(:flight_number => '1500', :flight_from => 'Sydney', :flight_to => 'Melbourne', :flight_date => '2018-04-19 03:30:00')
+f10 = Flight.create(:flight_number => '1000', :flight_from => 'Sydney', :flight_to => 'Melbourne', :flight_date => '2018-04-19 03:00:00')
 
 User.destroy_all
 u1 = User.create :name => 'Admin', :admin => true
 
-a1.flights << f1
-a2.flights << f2
-a3.flights << f3
-a4.flights << f4
+a1.flights << f1 << f7
+a2.flights << f2 << f8
+a3.flights << f3 << f9
+a4.flights << f4 << f10
 a5.flights << f5
 a6.flights << f6
