@@ -18,5 +18,6 @@ class Flight < ApplicationRecord
   has_many :users, through: :reservations
 
   default_scope -> { order(:flight_date).reverse }
+  #causes horrors if you reseed
 
 end

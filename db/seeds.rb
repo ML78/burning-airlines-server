@@ -54,7 +54,7 @@ u1 = User.create :name => 'Admin', :admin => true
 a1.flights << f1
 a2.flights << f2
 a3.flights << f3
-a4.flights << f4 
+a4.flights << f4
 a5.flights << f5
 a6.flights << f6
 a7.flights << f7
