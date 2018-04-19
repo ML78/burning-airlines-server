@@ -31,7 +31,10 @@ a3 = Airplane.create(:name => 'Airbus A300', :rows => 20, :columns => 20)
 a4 = Airplane.create(:name => 'Airbus A400', :rows => 15, :columns => 15)
 a5 = Airplane.create(:name => 'Airbus A500', :rows => 10, :columns => 10)
 a6 = Airplane.create(:name => 'Airbus A600', :rows => 10, :columns => 10)
-
+a7 = Airplane.create(:name => 'Airbus A700', :rows => 10, :columns => 10)
+a8 = Airplane.create(:name => 'Airbus A800', :rows => 10, :columns => 10)
+a9 = Airplane.create(:name => 'Airbus A900', :rows => 10, :columns => 10)
+a10 = Airplane.create(:name => 'Airbus A1000', :rows => 10, :columns => 10)
 
 Flight.destroy_all
 f1 = Flight.create(:flight_number => '2000', :flight_from => 'Sydney', :flight_to => 'Melbourne', :flight_date => '2018-05-09 21:30:00')
@@ -48,9 +51,13 @@ f10 = Flight.create(:flight_number => '1000', :flight_from => 'Sydney', :flight_
 User.destroy_all
 u1 = User.create :name => 'Admin', :admin => true
 
-a1.flights << f1 << f7
-a2.flights << f2 << f8
-a3.flights << f3 << f9
-a4.flights << f4 << f10
+a1.flights << f1
+a2.flights << f2
+a3.flights << f3
+a4.flights << f4 
 a5.flights << f5
 a6.flights << f6
+a7.flights << f7
+a8.flights << f8
+a9.flights << f9
+a10.flights << f10
